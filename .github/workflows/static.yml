@@ -34,7 +34,7 @@ jobs:
           cp index.html site/ || true
           if [ -d assets ]; then cp -r assets site/; fi
 
-      - name: Debug: show publish folder contents
+      - name:  show publish folder contents
         run: |
           echo "Publish folder tree:"
           ls -la site || true
