@@ -31,7 +31,10 @@ jobs:
           rm -rf site
           mkdir -p site
           # Copy index and the assets directory (adjust if you have other files)
-          cp . site/ || true
+          cp index.html site/ || true
+          cp style.css site/ || true
+          cp script.js site/ || true 
+          cp -r  assets  site/ || true 
           if [ -d assets ]; then cp -r assets site/; fi
 
       - name:  show publish folder contents
