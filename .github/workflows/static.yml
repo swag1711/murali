@@ -25,11 +25,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Prepare a minimal publish folder so we only upload the files that are needed.
+      - name: Prepare publish folder
+        run: |
+          rm -rf site
+          mkdir -p site
+          # Copy index and the assets directory (adjust if you have other files)
+          cp index.html site/ || true
+          if [ -d assets ]; then cp -r assets site/; fi
+
+      - name: Debug: show publish folder contents
+        run: |
+          echo "Publish folder tree:"
+          ls -la site || true
+          echo "Recursive listing:"
+          find site -maxdepth 3 -type f -print || true
+
       - uses: actions/configure-pages@v5
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: site
 
       - id: deployment
         uses: actions/deploy-pages@v5
