@@ -1,0 +1,1 @@
+Replace assets/Habsiguda_Address_QR.png with your QR code and deploy to Netlify/GitHub Pages/CCBP.

@@ -1,0 +1,614 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff8f2;
+    color:#3b1c1c;
+    overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#b8860b;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+/* Loader */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#4b0014;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:.8s;
+}
+
+.loader-content{
+    text-align:center;
+    color:#fff;
+}
+
+.loader-content h1{
+    font-size:70px;
+}
+
+.loader-content p{
+    margin-top:10px;
+    letter-spacing:3px;
+}
+
+/* Fonts */
+
+.script{
+    font-family:'Great Vibes',cursive;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:55px;
+    color:#7b1113;
+}
+
+/* Hero */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(rgba(60,0,0,.55),rgba(60,0,0,.55)),
+    url("https://i.pinimg.com/236x/59/f9/f3/59f9f38bdcd8196019353b1f2aa834ad.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    padding:40px;
+
+}
+
+.hero-content{
+    max-width:900px;
+    z-index:2;
+}
+
+.hero h3{
+    font-size:28px;
+    letter-spacing:4px;
+}
+
+.hero h1{
+    font-size:95px;
+    margin:20px 0;
+    color:#ffd54f;
+}
+
+.hero h2{
+    font-size:42px;
+    font-family:'Cinzel',serif;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* Button */
+
+.btn{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:16px 45px;
+
+background:linear-gradient(45deg,#d4af37,#ffeb8a);
+
+color:#5c0017;
+
+font-weight:700;
+
+border-radius:50px;
+
+text-decoration:none;
+
+transition:.4s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+/* Sections */
+
+.section{
+
+padding:90px 8%;
+
+}
+
+/* Invitation Card */
+
+.invitation-card{
+
+max-width:850px;
+
+margin:auto;
+
+background:white;
+
+border-radius:25px;
+
+padding:18px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.2);
+
+transition:.4s;
+
+border:6px solid #d4af37;
+
+}
+
+.invitation-card:hover{
+
+transform:scale(1.02);
+
+}
+
+.invitation-card img{
+
+width:100%;
+
+border-radius:20px;
+
+display:block;
+
+}
+
+/* Event Cards */
+
+.details-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+}
+
+.detail-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+transition:.4s;
+
+border-top:6px solid #d4af37;
+
+}
+
+.detail-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.detail-card i{
+
+font-size:48px;
+
+color:#b8860b;
+
+margin-bottom:20px;
+
+}
+
+.detail-card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+font-family:'Cinzel',serif;
+
+color:#7b1113;
+
+}
+
+.detail-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/* Countdown */
+
+.countdown{
+
+padding:90px 20px;
+
+background:linear-gradient(135deg,#6d0019,#9b1b30);
+
+text-align:center;
+
+color:white;
+
+}
+
+.countdown h2{
+
+font-size:60px;
+
+margin-bottom:50px;
+
+}
+
+#timer{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+#timer div{
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+padding:35px;
+
+border-radius:20px;
+
+width:160px;
+
+}
+
+#timer span{
+
+display:block;
+
+font-size:55px;
+
+font-weight:bold;
+
+color:#ffd54f;
+
+}
+
+#timer p{
+
+margin-top:10px;
+
+font-size:20px;
+
+}
+
+/* Venue */
+
+.venue-card{
+
+max-width:650px;
+
+margin:auto;
+
+background:white;
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.venue-card h3{
+
+font-size:34px;
+
+font-family:'Cinzel',serif;
+
+color:#7b1113;
+
+margin-bottom:20px;
+
+}
+
+.venue-card p{
+
+font-size:20px;
+
+margin-bottom:30px;
+
+}
+
+.venue-card a{
+
+display:inline-block;
+
+padding:15px 40px;
+
+border-radius:40px;
+
+background:#8b0000;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.venue-card a:hover{
+
+background:#b8860b;
+
+}
+
+/* Family */
+
+.family{
+
+background:#fff3e6;
+
+}
+
+.family-list{
+
+max-width:750px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.family-list p{
+
+font-size:25px;
+
+padding:18px;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#4b0014;
+
+padding:60px 20px;
+
+text-align:center;
+
+color:white;
+
+}
+
+footer h2{
+
+font-size:55px;
+
+color:#ffd54f;
+
+margin-bottom:20px;
+
+}
+
+footer p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/* Music Button */
+
+#musicBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+border:none;
+
+border-radius:50%;
+
+background:#b8860b;
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+box-shadow:0 12px 25px rgba(0,0,0,.3);
+
+transition:.4s;
+
+z-index:999;
+
+}
+
+#musicBtn:hover{
+
+transform:scale(1.12);
+
+}
+
+/* Floating Flowers */
+
+#flowers{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:9999;
+
+}
+
+.flower{
+
+position:absolute;
+
+font-size:28px;
+
+animation:fall linear infinite;
+
+opacity:.75;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-120px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(360deg);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.title h2{
+
+font-size:42px;
+
+}
+
+.countdown h2{
+
+font-size:42px;
+
+}
+
+#timer div{
+
+width:130px;
+
+padding:25px;
+
+}
+
+#timer span{
+
+font-size:40px;
+
+}
+
+.family-list p{
+
+font-size:20px;
+
+}
+
+}
